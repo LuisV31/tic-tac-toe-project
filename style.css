@@ -1,19 +1,32 @@
+/* Set box sizing and reset margins and padding for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Set font family and size for body */
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
 }
 
+/* Style for start screen */
+#start-screen {
+    margin: 0 auto;
+}
+
+/* Hide game board container inistially */
+#game-board-container {
+    display: none;
+}
+
+/* Style for game area */
 .game-area {
     display: flex;
     justify-content: space-between;
@@ -21,6 +34,7 @@ h1 {
     /* margin: 30px 50px; */
 }
 
+/* Style for game board */
 .game-board {
     display: flex;
     flex-direction: column;

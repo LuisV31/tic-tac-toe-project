@@ -1,18 +1,14 @@
 const playerCreator = (name, symbol) => {
     return {
-        name: name,
-        symbol: symbol
-    }
-}
+        name,
+        symbol
+    };
+};
 
-const gameBoard = (() =>  {
+const gameBoard = (() => {
     const squares = document.querySelectorAll('.square');
 
-    let gameArray = [
-        "X","","O",
-        "","X","",
-        "O","","X"
-    ];
+    let gameArray = Array(9).fill("");
 
     const renderBoard = (gameArray) => {
         squares.forEach((square, index) => {
@@ -45,7 +41,12 @@ const gameController = (() => {
     let currentPlayer = player1;
 
     const startGame = () => {
-        //listeners go here to inistialize the game
+        const startButton = document.getElementById('start-button');
+        const startScreen = document.getElementById('start-screen');
+        startButton.addEventListener('click', () => {
+            document.getElementById('game-board-container').style.display = 'block';
+            startScreen.style.display = 'none';
+        });
     }
     
     const playersTurn = () => {
@@ -66,3 +67,4 @@ const gameController = (() => {
     };
 })();
 
+gameController.startGame();
