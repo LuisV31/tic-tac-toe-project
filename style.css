@@ -70,3 +70,28 @@ h1, h3 {
     margin-bottom: 10px;
 }
 
+.symbol-container {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type='radio'] {
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.symbol-container input[type="radio"]:hover+label img {
+    background-color: #a49f9fe4;
+}
+
+.symbol-container input[type="radio"]:checked+label img {
+    border: 2px solid #333;
+    background-color: #a49f9fe4;
+}
